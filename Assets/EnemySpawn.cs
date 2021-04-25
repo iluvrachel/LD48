@@ -48,8 +48,8 @@ public class EnemySpawn : MonoBehaviour
     private void Spawn()
     {
         GameObject enemyToSpawn = enemyType();
-        float yPos = UnityEngine.Random.Range(-4.8f,4.8f);
-        float xPos = UnityEngine.Random.Range(-10f,10f);
+        float yPos = UnityEngine.Random.Range(-250f,250f);
+        float xPos = UnityEngine.Random.Range(-500f,500f);
         Vector3 posToSpawnEnemy = new Vector3(this.transform.position.x + xPos,this.transform.position.y + yPos,0f);
         Instantiate(enemyToSpawn,posToSpawnEnemy,Quaternion.identity);
     }

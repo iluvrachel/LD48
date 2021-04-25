@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
 
 
     private Rigidbody2D m_rg;
-    public float MoveSpeed = 5.0f;
+    public float MoveSpeed = 250.0f;
     Vector2 m_scale;
     // public float Gravity = 1;
     private Rigidbody2D rb;

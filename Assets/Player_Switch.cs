@@ -42,13 +42,13 @@ public class Player_Switch : MonoBehaviour
                     SceneManager.LoadScene("SampleScene");
                 }
                 P1.GetComponent<PlayerController>().enabled = true;
-                P1.GetComponent<Rigidbody2D>().gravityScale = 1f; 
+                P1.GetComponent<Rigidbody2D>().gravityScale = 50f; 
                 P1.GetComponent<Rigidbody2D>().drag = 0f; 
-                P1.transform.position = new Vector2(0f,0f);
+                P1.transform.position = new Vector2(-678f,300f);
 
 
                 P0.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
-                P0.GetComponent<Rigidbody2D>().drag = 1f; 
+                P0.GetComponent<Rigidbody2D>().drag = 50f; 
                 P0.GetComponent<PlayerController>().enabled = false;
             }
             // l1 jump to l2
@@ -56,13 +56,13 @@ public class Player_Switch : MonoBehaviour
             {
                 //print(Hit_the_ground.game_over_flag);
                 P2.GetComponent<PlayerController>().enabled = true;
-                P2.GetComponent<Rigidbody2D>().gravityScale = 1f; 
+                P2.GetComponent<Rigidbody2D>().gravityScale = 50f; 
                 P2.GetComponent<Rigidbody2D>().drag = 0f; 
-                P2.transform.position = new Vector2(-20.45f,2.4f);
+                P2.transform.position = new Vector2(-1886f,372f);
 
 
                 P1.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
-                P1.GetComponent<Rigidbody2D>().drag = 1f; 
+                P1.GetComponent<Rigidbody2D>().drag = 50f; 
                 P1.GetComponent<PlayerController>().enabled = false;
             }
 
