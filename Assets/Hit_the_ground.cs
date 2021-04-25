@@ -39,7 +39,7 @@ public class Hit_the_ground : MonoBehaviour
             // l2 to l1
             if(this.tag == "L2")
             {
-                print(C1.activeInHierarchy);
+                //print(C1.activeInHierarchy);
                 if(C2.activeInHierarchy==true)
                 {
                     C1.SetActive(true);
@@ -103,6 +103,11 @@ public class Hit_the_ground : MonoBehaviour
             else if(this.tag == "L0")
                 {
                     // game over
+                    C0.SetActive(true);
+                    C1.SetActive(false);
+                    C2.SetActive(false);
+
+
                     Time.timeScale = 0.05f; //slow motion
                     Time.fixedDeltaTime = 0.02F*Time.timeScale; // frame smooth
                     game_over_flag =true;

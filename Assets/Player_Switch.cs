@@ -29,8 +29,9 @@ public class Player_Switch : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.I))
         {
             // l0 jump to l1
-            if(P1.GetComponent<PlayerController>().enabled==false && P2.GetComponent<PlayerController>().enabled==false)
+            if(P1.GetComponent<PlayerController>().enabled==false && P2.GetComponent<PlayerController>().enabled==false && !Hit_the_ground.game_over_flag)
             {
+                print(Hit_the_ground.game_over_flag);
                 if(Hit_the_ground.game_over_flag) // game over, press i to restart
                 {
                     SceneManager.LoadScene("SampleScene");
@@ -46,8 +47,9 @@ public class Player_Switch : MonoBehaviour
                 P0.GetComponent<PlayerController>().enabled = false;
             }
             // l1 jump to l2
-            else if(P0.GetComponent<PlayerController>().enabled==false && P2.GetComponent<PlayerController>().enabled==false)
+            else if(P0.GetComponent<PlayerController>().enabled==false && P2.GetComponent<PlayerController>().enabled==false && !Hit_the_ground.game_over_flag)
             {
+                print(Hit_the_ground.game_over_flag);
                 P2.GetComponent<PlayerController>().enabled = true;
                 P2.GetComponent<Rigidbody2D>().gravityScale = 1f; 
                 P2.GetComponent<Rigidbody2D>().drag = 0f; 

@@ -20,7 +20,7 @@ public class Game_Over : MonoBehaviour
     {
         if(Hit_the_ground.game_over_flag)
         {
-            print("over");
+            //print("over");
             gm.SetActive(true);
         }
     }

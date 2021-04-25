@@ -25,11 +25,16 @@ public class PlayerController : MonoBehaviour
         sr = gameObject.GetComponent<SpriteRenderer>(); 
         ps = gameObject.GetComponent<ParticleSystem>();
         ps.Stop();
+
+        
+    }
+
+    void Awake()
+    {
         if(healthBar!=null)
         {
             healthBar.value = healthBar.minValue;
         }
-        
     }
 
     // Update is called once per frame
@@ -94,7 +99,7 @@ public class PlayerController : MonoBehaviour
             // PlayerHealth.P1_hit = true;
             if(charge_target_healthBar!=null)
             {
-                charge_target_healthBar.value += 5f;
+                charge_target_healthBar.value += 25f;
             }
 
         }

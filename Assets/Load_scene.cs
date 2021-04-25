@@ -19,7 +19,7 @@ public class Load_scene : MonoBehaviour
 
     public void LoadGame()
     {
-        if(Input.GetKeyDown(KeyCode.I))
+        if(Hit_the_ground.game_over_flag && Input.GetKeyDown(KeyCode.I))
         {
             Time.timeScale = 1f;
             SceneManager.LoadScene("SampleScene");
