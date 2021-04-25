@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private GameObject C1;
     private GameObject C2;
 
+
     private Rigidbody2D m_rg;
     public float MoveSpeed = 5.0f;
     Vector2 m_scale;

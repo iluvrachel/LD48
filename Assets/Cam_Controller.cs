@@ -1,12 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Cam_Controller : MonoBehaviour
 {
     GameObject C0;
     GameObject C1;
     GameObject C2;
+
+    public GameObject I0;
+    public GameObject I1;
+    public GameObject I2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +46,25 @@ public class Cam_Controller : MonoBehaviour
             //     C1.SetActive(true);
             //     C2.SetActive(false);
             // }
+        }
+
+        if(C0.activeInHierarchy==true)
+        {
+            I0.transform.localScale = new Vector3(1.2f,1.2f,1.2f); 
+            I1.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
+            I2.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
+        }
+        else if(C1.activeInHierarchy==true)
+        {
+            I1.transform.localScale = new Vector3(1.2f,1.2f,1.2f); 
+            I0.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
+            I2.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
+        }
+        else if(C2.activeInHierarchy==true)
+        {
+            I2.transform.localScale = new Vector3(1.2f,1.2f,1.2f); 
+            I1.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
+            I0.transform.localScale = new Vector3(1.0f,1.0f,1.0f);
         }
     }
 }
