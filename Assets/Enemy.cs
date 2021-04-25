@@ -8,7 +8,7 @@ public class Enemy : MonoBehaviour
     private SpriteRenderer sr;
     private CircleCollider2D col;
 
-    // public AudioSource explosionAudio;
+    private AudioSource explosionAudio;
 
     private bool isVis = true;
     private int timer = 0;
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
         col =  gameObject.GetComponent<CircleCollider2D>(); 
         ps.Stop();
 
-        // explosionAudio = GetComponent<AudioSource>();
+        explosionAudio = GetComponent<AudioSource>();
 
         hitSign = false;
         //releaseSign = 0;
@@ -68,7 +68,7 @@ public class Enemy : MonoBehaviour
             // Combo.comboCount += 1;
             // Controller.releaseSign = 0;
             // print("hit");
-            // explosionAudio.Play();
+            explosionAudio.Play();
             sr.enabled = false;
             col.enabled = false;
             ps.Play();

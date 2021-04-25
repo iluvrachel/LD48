@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviour
 
     public Slider healthBar;
     public Slider charge_target_healthBar;
+
+    private AudioSource dieAudio;
     
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,8 @@ public class PlayerController : MonoBehaviour
         sr = gameObject.GetComponent<SpriteRenderer>(); 
         ps = gameObject.GetComponent<ParticleSystem>();
         ps.Stop();
+
+        dieAudio = GetComponent<AudioSource>();
 
         
     }
@@ -115,6 +119,7 @@ public class PlayerController : MonoBehaviour
         }
         if(other.gameObject.tag=="Creeper")
         {
+            dieAudio.Play();
             if(this.tag=="P0")
             {
                 ps.Play();
@@ -169,6 +174,7 @@ public class PlayerController : MonoBehaviour
         // stay still
         // rb.velocity = Vector2.zero;
         // rb.gravityScale = 0f;
+        
         gameObject.GetComponent<PlayerController>().enabled = false;
 
         //transform.position = finalPos;
