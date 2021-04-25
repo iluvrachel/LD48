@@ -67,9 +67,10 @@ public class Player_Switch : MonoBehaviour
             }
 
             // l2 to hidden place
-            else if(P1.GetComponent<PlayerController>().enabled==false)
+            else if(P2.GetComponent<PlayerController>().enabled==true)
             {
-
+                print("!!!");
+                SceneManager.LoadScene("TrueEnd");
             }
 
         }
