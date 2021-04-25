@@ -46,7 +46,7 @@ public class Hit_the_ground : MonoBehaviour
                     C2.SetActive(false);
 
                     P1.GetComponent<PlayerController>().enabled = true;
-                    P1.GetComponent<Rigidbody2D>().gravityScale = 1f; 
+                    P1.GetComponent<Rigidbody2D>().gravityScale = 50f; 
                     P1.GetComponent<Rigidbody2D>().drag = 0f; 
 
                     P2.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
@@ -69,7 +69,7 @@ public class Hit_the_ground : MonoBehaviour
                     C1.SetActive(false);
 
                     P0.GetComponent<PlayerController>().enabled = true;
-                    P0.GetComponent<Rigidbody2D>().gravityScale = 1f; 
+                    P0.GetComponent<Rigidbody2D>().gravityScale = 50f; 
                     P0.GetComponent<Rigidbody2D>().drag = 0f; 
 
                     P1.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
@@ -86,7 +86,7 @@ public class Hit_the_ground : MonoBehaviour
                     C2.SetActive(false);
 
                     P0.GetComponent<PlayerController>().enabled = true;
-                    P0.GetComponent<Rigidbody2D>().gravityScale = 1f; 
+                    P0.GetComponent<Rigidbody2D>().gravityScale = 50f; 
                     P0.GetComponent<Rigidbody2D>().drag = 0f; 
 
                     P1.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
