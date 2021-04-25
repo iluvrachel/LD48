@@ -117,25 +117,32 @@ public class PlayerController : MonoBehaviour
         {
             if(this.tag=="P0")
             {
+                ps.Play();
+                sr.enabled = false;
+                Hit_the_ground.game_over_flag = true;
                 C0.SetActive(true);
                 C1.SetActive(false);
                 C2.SetActive(false);
             }
             if(this.tag=="P1")
             {
+                ps.Play();
+                sr.enabled = false;
+                Hit_the_ground.game_over_flag = true;
                 C1.SetActive(true);
                 C0.SetActive(false);
                 C2.SetActive(false);
             }
             if(this.tag=="P2")
             {
+                ps.Play();
+                sr.enabled = false;
+                Hit_the_ground.game_over_flag = true;
                 C2.SetActive(true);
                 C1.SetActive(false);
                 C0.SetActive(false);
             }
-            ps.Play();
-            sr.enabled = false;
-            Hit_the_ground.game_over_flag = true;
+
             // TODO: destroy player
 
         }
