@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     Vector2 m_scale;
     // public float Gravity = 1;
     private Rigidbody2D rb;
+    private SpriteRenderer sr;
+    private ParticleSystem ps;
 
     public Slider healthBar;
     public Slider charge_target_healthBar;
@@ -20,6 +22,9 @@ public class PlayerController : MonoBehaviour
         m_rg = gameObject.GetComponent<Rigidbody2D>();
         m_scale = transform.localScale;
         rb = gameObject.GetComponent<Rigidbody2D>(); //Rigidbody of Player
+        sr = gameObject.GetComponent<SpriteRenderer>(); 
+        ps = gameObject.GetComponent<ParticleSystem>();
+        ps.Stop();
         if(healthBar!=null)
         {
             healthBar.value = healthBar.minValue;
@@ -93,13 +98,14 @@ public class PlayerController : MonoBehaviour
             }
 
         }
-        // if(other.gameObject.tag=="Creeper")
-        // {
+        if(other.gameObject.tag=="Creeper")
+        {
+            ps.Play();
+            sr.enabled = false;
+            Hit_the_ground.game_over_flag = true;
+            // TODO: destroy player
 
-        //     healthBar.value = healthBar.minValue;   
-        //     CameraRig.isHit = true;
-
-        // }
+        }
         // if(other.gameObject.tag=="Purple")
         // {
         //     Vector3 direction = new Vector3(UnityEngine.Random.Range(0f,1f),UnityEngine.Random.Range(0f,1f),UnityEngine.Random.Range(0f,1f));
