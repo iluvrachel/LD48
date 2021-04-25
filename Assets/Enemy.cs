@@ -56,11 +56,11 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) 
     {
-        if(other.gameObject.tag=="Player")
+        if(other.gameObject.tag=="P0" || other.gameObject.tag=="P1" || other.gameObject.tag=="P2")
         {
             if(this.tag=="Purple")
             {
-                print("score");
+                //print("score");
                 ScoreManager.score += 100;
             }
 

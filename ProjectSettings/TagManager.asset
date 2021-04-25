@@ -9,6 +9,10 @@ TagManager:
   - L2
   - Purple
   - L0
+  - Creeper
+  - P0
+  - P1
+  - P2
   layers:
   - Default
   - TransparentFX

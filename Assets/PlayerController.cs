@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    private GameObject C0;
+    private GameObject C1;
+    private GameObject C2;
+
     private Rigidbody2D m_rg;
     public float MoveSpeed = 5.0f;
     Vector2 m_scale;
@@ -19,6 +23,10 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        C0 = GameObject.Find("C0");
+        C1 = GameObject.Find("C1");
+        C2 = GameObject.Find("C2");
+
         m_rg = gameObject.GetComponent<Rigidbody2D>();
         m_scale = transform.localScale;
         rb = gameObject.GetComponent<Rigidbody2D>(); //Rigidbody of Player
@@ -101,10 +109,29 @@ public class PlayerController : MonoBehaviour
             {
                 charge_target_healthBar.value += 25f;
             }
+            ScoreManager.score += 10;
 
         }
         if(other.gameObject.tag=="Creeper")
         {
+            if(this.tag=="P0")
+            {
+                C0.SetActive(true);
+                C1.SetActive(false);
+                C2.SetActive(false);
+            }
+            if(this.tag=="P1")
+            {
+                C1.SetActive(true);
+                C0.SetActive(false);
+                C2.SetActive(false);
+            }
+            if(this.tag=="P2")
+            {
+                C2.SetActive(true);
+                C1.SetActive(false);
+                C0.SetActive(false);
+            }
             ps.Play();
             sr.enabled = false;
             Hit_the_ground.game_over_flag = true;
@@ -132,12 +159,13 @@ public class PlayerController : MonoBehaviour
     {
 
         // stay still
-        rb.velocity = Vector2.zero;
+        // rb.velocity = Vector2.zero;
+        // rb.gravityScale = 0f;
         gameObject.GetComponent<PlayerController>().enabled = false;
 
         //transform.position = finalPos;
         
 
-        //Destroy(gameObject);
+        // Destroy(gameObject);
     }
 }

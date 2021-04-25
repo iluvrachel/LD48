@@ -13,6 +13,7 @@ public class Game_Over : MonoBehaviour
         Hit_the_ground.game_over_flag = false;
         gm = transform.Find("GameOver").gameObject;
         gm.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame
@@ -20,6 +21,8 @@ public class Game_Over : MonoBehaviour
     {
         if(Hit_the_ground.game_over_flag)
         {
+            Time.timeScale = 0.05f; //slow motion
+            Time.fixedDeltaTime = 0.02F*Time.timeScale; // frame smooth
             //print("over");
             gm.SetActive(true);
         }

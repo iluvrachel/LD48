@@ -23,7 +23,7 @@ public class Hit_the_ground : MonoBehaviour
         // P0 = GameObject.Find("P0");
         // P1 = GameObject.Find("P1");
         // P2 = GameObject.Find("P2");
-        Time.timeScale = 1f;
+        
     }
 
     // Update is called once per frame
@@ -34,7 +34,7 @@ public class Hit_the_ground : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other) 
     {
-        if(other.gameObject.tag=="Player")
+        if(other.gameObject.tag=="P0" || other.gameObject.tag=="P1" || other.gameObject.tag=="P2")
         {
             // l2 to l1
             if(this.tag == "L2")
@@ -108,8 +108,8 @@ public class Hit_the_ground : MonoBehaviour
                     C2.SetActive(false);
 
 
-                    Time.timeScale = 0.05f; //slow motion
-                    Time.fixedDeltaTime = 0.02F*Time.timeScale; // frame smooth
+                    // Time.timeScale = 0.05f; //slow motion
+                    // Time.fixedDeltaTime = 0.02F*Time.timeScale; // frame smooth
                     game_over_flag =true;
                 }
         }
