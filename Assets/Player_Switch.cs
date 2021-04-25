@@ -9,17 +9,22 @@ public class Player_Switch : MonoBehaviour
     GameObject P1;
     GameObject P2;
 
+    // GameObject P;
+
     // Start is called before the first frame update
     void Start()
     {
         P0 = GameObject.Find("P0");
         P1 = GameObject.Find("P1");
         P2 = GameObject.Find("P2");
+        // P = GameObject.Find("P");
 
         P1.GetComponent<PlayerController>().enabled = false;
         P1.GetComponent<Rigidbody2D>().gravityScale = 0f;
         P2.GetComponent<PlayerController>().enabled = false;
         P2.GetComponent<Rigidbody2D>().gravityScale = 0f;
+        // P.GetComponent<PlayerController>().enabled = false;
+        // P.GetComponent<Rigidbody2D>().gravityScale = 0f;
 
     }
 
@@ -61,14 +66,11 @@ public class Player_Switch : MonoBehaviour
                 P1.GetComponent<PlayerController>().enabled = false;
             }
 
-            // else if(P1.GetComponent<PlayerController>().enabled==false)
-            // {
-            //     P1.GetComponent<PlayerController>().enabled = true;
+            // l2 to hidden place
+            else if(P1.GetComponent<PlayerController>().enabled==false)
+            {
 
-            //     P2.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
-            //     P2.GetComponent<Rigidbody2D>().drag = 1f; 
-            //     P2.GetComponent<PlayerController>().enabled = false;
-            // }
+            }
 
         }
     }
