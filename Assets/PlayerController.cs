@@ -67,6 +67,10 @@ public class PlayerController : MonoBehaviour
             if(healthBar!=null)
             {
                 healthBar.value -= 0.1f;
+                if (healthBar.value <= 0)
+                {
+                    Die();
+                }
             }
             
         }
@@ -82,7 +86,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag=="Enemy")
         {
             // healthBar.value += 15f;   
-            PlayerHealth.P1_hit = true;
+            // PlayerHealth.P1_hit = true;
             if(charge_target_healthBar!=null)
             {
                 charge_target_healthBar.value += 5f;
@@ -111,5 +115,18 @@ public class PlayerController : MonoBehaviour
 
         // }
 
+    }
+
+    private void Die()
+    {
+
+        // stay still
+        rb.velocity = Vector2.zero;
+        gameObject.GetComponent<PlayerController>().enabled = false;
+
+        //transform.position = finalPos;
+        
+
+        //Destroy(gameObject);
     }
 }

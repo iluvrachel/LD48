@@ -23,6 +23,7 @@ public class Hit_the_ground : MonoBehaviour
         // P0 = GameObject.Find("P0");
         // P1 = GameObject.Find("P1");
         // P2 = GameObject.Find("P2");
+        Time.timeScale = 1f;
     }
 
     // Update is called once per frame

@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public static bool P1_hit = false;
-    public static bool P2_hit = false;
+    // public static bool P1_hit = false;
+    // public static bool P2_hit = false;
    
     // Start is called before the first frame update
     void Start()

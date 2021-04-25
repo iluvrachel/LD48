@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Switch : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class Player_Switch : MonoBehaviour
             // l0 jump to l1
             if(P1.GetComponent<PlayerController>().enabled==false && P2.GetComponent<PlayerController>().enabled==false)
             {
+                if(Hit_the_ground.game_over_flag) // game over, press i to restart
+                {
+                    SceneManager.LoadScene("SampleScene");
+                }
                 P1.GetComponent<PlayerController>().enabled = true;
                 P1.GetComponent<Rigidbody2D>().gravityScale = 1f; 
                 P1.GetComponent<Rigidbody2D>().drag = 0f; 
@@ -62,6 +67,7 @@ public class Player_Switch : MonoBehaviour
             //     P2.GetComponent<Rigidbody2D>().drag = 1f; 
             //     P2.GetComponent<PlayerController>().enabled = false;
             // }
+
         }
     }
 }

@@ -21,6 +21,7 @@ public class Load_scene : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.I))
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene("SampleScene");
         }
         
