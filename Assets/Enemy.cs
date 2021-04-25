@@ -58,22 +58,22 @@ public class Enemy : MonoBehaviour
     {
         if(other.gameObject.tag=="Player")
         {
+            if(this.tag=="Purple")
+            {
+                print("score");
+                ScoreManager.score += 100;
+            }
 
             hitSign = true;
             // Combo.comboCount += 1;
             // Controller.releaseSign = 0;
-            print("hit");
+            // print("hit");
             // explosionAudio.Play();
             sr.enabled = false;
             col.enabled = false;
             ps.Play();
             Destroy(gameObject,6);
             // ScoreManager.score += Combo.comboCount*100;
-
-
-
- 
-
             //Combo.comboCount += 1;
         }
     }

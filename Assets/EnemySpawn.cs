@@ -36,7 +36,11 @@ public class EnemySpawn : MonoBehaviour
         // }
         if(UnityEngine.Random.Range(0f,1f)<0.01)
         {
-            Spawn();
+            if(!Hit_the_ground.game_over_flag)
+            {
+                Spawn();
+            }
+            
         }
         
     }

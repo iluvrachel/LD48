@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>(); //Rigidbody of Player
         if(healthBar!=null)
         {
-            healthBar.value = healthBar.maxValue;
+            healthBar.value = healthBar.minValue;
         }
         
     }

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Hit_the_ground : MonoBehaviour
 {
+
+    public static bool game_over_flag = false;
+
     public GameObject C0;
     public GameObject C1;
     public GameObject C2;
@@ -95,7 +98,14 @@ public class Hit_the_ground : MonoBehaviour
                 }
 
             }
-    
+            // l0 to over
+            else if(this.tag == "L0")
+                {
+                    // game over
+                    Time.timeScale = 0.05f; //slow motion
+                    Time.fixedDeltaTime = 0.02F*Time.timeScale; // frame smooth
+                    game_over_flag =true;
+                }
         }
     }
 }
