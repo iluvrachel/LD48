@@ -49,11 +49,11 @@ public class Hit_the_ground : MonoBehaviour
                     P1.GetComponent<Rigidbody2D>().gravityScale = 50f; 
                     P1.GetComponent<Rigidbody2D>().drag = 0f; 
 
-                    P2.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
+                    P2.GetComponent<Rigidbody2D>().gravityScale = 1f; 
                     P2.GetComponent<Rigidbody2D>().drag = 1f; 
                     P2.GetComponent<PlayerController>().enabled = false;
 
-                    P0.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
+                    P0.GetComponent<Rigidbody2D>().gravityScale = 1f; 
                     P0.GetComponent<Rigidbody2D>().drag = 1f; 
                     P0.GetComponent<PlayerController>().enabled = false;  
                 }
@@ -72,11 +72,11 @@ public class Hit_the_ground : MonoBehaviour
                     P0.GetComponent<Rigidbody2D>().gravityScale = 50f; 
                     P0.GetComponent<Rigidbody2D>().drag = 0f; 
 
-                    P1.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
+                    P1.GetComponent<Rigidbody2D>().gravityScale = 1f; 
                     P1.GetComponent<Rigidbody2D>().drag = 1f; 
                     P1.GetComponent<PlayerController>().enabled = false;
 
-                    P2.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
+                    P2.GetComponent<Rigidbody2D>().gravityScale = 1f; 
                     P2.GetComponent<Rigidbody2D>().drag = 1f; 
                     P2.GetComponent<PlayerController>().enabled = false;
                 }
@@ -89,11 +89,11 @@ public class Hit_the_ground : MonoBehaviour
                     P0.GetComponent<Rigidbody2D>().gravityScale = 50f; 
                     P0.GetComponent<Rigidbody2D>().drag = 0f; 
 
-                    P1.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
+                    P1.GetComponent<Rigidbody2D>().gravityScale = 1f; 
                     P1.GetComponent<Rigidbody2D>().drag = 1f; 
                     P1.GetComponent<PlayerController>().enabled = false;
 
-                    P2.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
+                    P2.GetComponent<Rigidbody2D>().gravityScale = 1f; 
                     P2.GetComponent<Rigidbody2D>().drag = 1f; 
                     P2.GetComponent<PlayerController>().enabled = false;                    
                 }

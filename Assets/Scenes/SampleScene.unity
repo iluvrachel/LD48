@@ -391,12 +391,12 @@ PrefabInstance:
     - target: {fileID: 8177049018731324119, guid: a9169e8cce5d2f04d9deee24aa58a6d0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1203.2002
+      value: 1041
       objectReference: {fileID: 0}
     - target: {fileID: 8177049018731324119, guid: a9169e8cce5d2f04d9deee24aa58a6d0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 971
+      value: 819
       objectReference: {fileID: 0}
     - target: {fileID: 8177049018731324119, guid: a9169e8cce5d2f04d9deee24aa58a6d0,
         type: 3}
@@ -805,6 +805,7 @@ MonoBehaviour:
   creeper: {fileID: 793171204}
   purple: {fileID: 793171204}
   healer: {fileID: 793171204}
+  spawnTime: 3
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -983,12 +984,12 @@ PrefabInstance:
     - target: {fileID: 6549298265818623509, guid: c5c27a0c27119664583261c82bdcc347,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1638.1001
+      value: 1036
       objectReference: {fileID: 0}
     - target: {fileID: 6549298265818623509, guid: c5c27a0c27119664583261c82bdcc347,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 967
+      value: 640
       objectReference: {fileID: 0}
     - target: {fileID: 6549298265818623509, guid: c5c27a0c27119664583261c82bdcc347,
         type: 3}
@@ -7722,12 +7723,12 @@ PrefabInstance:
     - target: {fileID: 8177049018731324119, guid: a9169e8cce5d2f04d9deee24aa58a6d0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1953
+      value: 1040
       objectReference: {fileID: 0}
     - target: {fileID: 8177049018731324119, guid: a9169e8cce5d2f04d9deee24aa58a6d0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 938
+      value: 703
       objectReference: {fileID: 0}
     - target: {fileID: 8177049018731324119, guid: a9169e8cce5d2f04d9deee24aa58a6d0,
         type: 3}
@@ -13457,6 +13458,7 @@ MonoBehaviour:
   creeper: {fileID: 273967396}
   purple: {fileID: 273967396}
   healer: {fileID: 273967396}
+  spawnTime: 3
 --- !u!81 &1818639013
 AudioListener:
   m_ObjectHideFlags: 0
@@ -18599,12 +18601,12 @@ PrefabInstance:
     - target: {fileID: 1292248591638810345, guid: 185f21b5dcdae1b4db530fb513f72310,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1324
+      value: 1041
       objectReference: {fileID: 0}
     - target: {fileID: 1292248591638810345, guid: 185f21b5dcdae1b4db530fb513f72310,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1006
+      value: 755
       objectReference: {fileID: 0}
     - target: {fileID: 1292248591638810345, guid: 185f21b5dcdae1b4db530fb513f72310,
         type: 3}
@@ -18668,7 +18670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1762869986, guid: 185f21b5dcdae1b4db530fb513f72310, type: 3}
       propertyPath: MinDistance
-      value: 29.134521
+      value: 18.415527
       objectReference: {fileID: 0}
     - target: {fileID: 1762869986, guid: 185f21b5dcdae1b4db530fb513f72310, type: 3}
       propertyPath: m_audioClip
@@ -18881,6 +18883,7 @@ MonoBehaviour:
   creeper: {fileID: 498459719}
   purple: {fileID: 1030008704}
   healer: {fileID: 498459719}
+  spawnTime: 3
 --- !u!114 &2117967330
 MonoBehaviour:
   m_ObjectHideFlags: 0

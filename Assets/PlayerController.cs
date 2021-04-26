@@ -30,6 +30,15 @@ public class PlayerController : MonoBehaviour
         C1 = GameObject.Find("C1");
         C2 = GameObject.Find("C2");
 
+        dieAudio = GetComponent<AudioSource>();
+
+        
+    }
+
+    
+
+    void Awake()
+    {
         m_rg = gameObject.GetComponent<Rigidbody2D>();
         m_scale = transform.localScale;
         rb = gameObject.GetComponent<Rigidbody2D>(); //Rigidbody of Player
@@ -37,13 +46,6 @@ public class PlayerController : MonoBehaviour
         ps = gameObject.GetComponent<ParticleSystem>();
         ps.Stop();
 
-        dieAudio = GetComponent<AudioSource>();
-
-        
-    }
-
-    void Awake()
-    {
         if(healthBar!=null)
         {
             healthBar.value = healthBar.minValue;
@@ -51,7 +53,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetAxisRaw("Vertical") > 0)
         {
@@ -99,10 +101,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    void FixedUpdate() 
-    {
-        // rb.AddForce(new Vector3(0, -9.81f, 0));
-    }
+    // void FixedUpdate() 
+    // {
+    //     // rb.AddForce(new Vector3(0, -9.81f, 0));
+    // }
 
     void OnCollisionEnter2D(Collision2D other) 
     {

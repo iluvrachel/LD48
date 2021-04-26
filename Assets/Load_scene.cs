@@ -15,6 +15,10 @@ public class Load_scene : MonoBehaviour
     void Update()
     {
         LoadGame();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void LoadGame()

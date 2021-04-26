@@ -78,14 +78,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    private void OnBecameVisible() 
-    {
-        isVis = true;
-    }
+    // private void OnBecameVisible() 
+    // {
+    //     isVis = true;
+    // }
 
-    private void OnBecameInvisible() 
-    {
-        isVis = false;
-    } 
+    // private void OnBecameInvisible() 
+    // {
+    //     isVis = false;
+    // } 
 
 }

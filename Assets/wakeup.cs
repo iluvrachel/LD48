@@ -16,6 +16,11 @@ public class wakeup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+         if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+
         if(i>0 && i < 25)
         {
             i++;
@@ -29,6 +34,7 @@ public class wakeup : MonoBehaviour
         if(other.gameObject.tag=="Finish")
         {
             text.text = "Welcome back to reality.";
+            gameObject.GetComponent<TrailRenderer>().enabled = false;
             Destroy(other.gameObject);
             i = 1;
         }

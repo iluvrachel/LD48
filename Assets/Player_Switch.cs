@@ -47,7 +47,7 @@ public class Player_Switch : MonoBehaviour
                 P1.transform.position = new Vector2(-678f,300f);
 
 
-                P0.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
+                P0.GetComponent<Rigidbody2D>().gravityScale = 1f; 
                 P0.GetComponent<Rigidbody2D>().drag = 50f; 
                 P0.GetComponent<PlayerController>().enabled = false;
             }
@@ -61,7 +61,7 @@ public class Player_Switch : MonoBehaviour
                 P2.transform.position = new Vector2(-1886f,372f);
 
 
-                P1.GetComponent<Rigidbody2D>().gravityScale = 0.01f; 
+                P1.GetComponent<Rigidbody2D>().gravityScale = 1f; 
                 P1.GetComponent<Rigidbody2D>().drag = 50f; 
                 P1.GetComponent<PlayerController>().enabled = false;
             }
